@@ -1,5 +1,7 @@
 # 絵日記ブログ（仮）
 
+[![CircleCI](https://circleci.com/gh/mofumofuchan/cookpad_challenge/tree/master.svg?style=svg)](https://circleci.com/gh/mofumofuchan/cookpad_challenge/tree/master)
+
 後々書く
 
 This README would normally document whatever steps are necessary to get the
