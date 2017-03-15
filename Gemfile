@@ -10,6 +10,7 @@ gem 'turbolinks', '5.0.1'
 gem 'jbuilder', '2.4.1'
 gem 'bcrypt',   '3.1.11'
 gem 'devise', '4.2.0'
+gem 'carrierwave', '1.0.0'
 
 group :development, :test do
   gem 'sqlite3', '1.3.11'
