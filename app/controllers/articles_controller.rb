@@ -1,18 +1,13 @@
 class ArticlesController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create]
+
   def new
-    unless user_signed_in?
-      redirect_to new_user_session_path
-    end
     @article = Article.new
   end
 
   def create
-    unless user_signed_in?
-      redirect_to new_user_session_path
-    end
     @article = Article.new(article_params)
     @article.user_id = current_user.id
-    pp @article.valid? # debug
     @article.save
   end
 

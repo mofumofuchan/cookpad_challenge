@@ -1,0 +1,15 @@
+<h1>Users#show</h1>
+
+your email
+<%= @user.email %>
+
+<%= link_to "write article", articles_new_path %>
+
+<ul>
+<% @articles.each do |article| %>
+  <li>
+    <%= article.content %>
+    <%= image_tag article.drawing.url if article.drawing? %>
+  </li>
+<% end %>
+</ul>

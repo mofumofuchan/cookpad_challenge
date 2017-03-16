@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.3.1'
+
 gem 'rails', '5.0.0.1'
 gem 'puma', '3.4.0'
 gem 'sass-rails', '5.0.6'
@@ -22,6 +24,7 @@ group :development do
   gem 'listen', '3.0.8'
   gem 'spring', '1.7.2'
   gem 'spring-watcher-listen', '2.0.0'
+  gem 'bullet', '5.5.1'
 end
 
 group :test do
