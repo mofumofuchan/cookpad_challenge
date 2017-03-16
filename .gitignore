@@ -27,6 +27,11 @@
 # Ignore Spring files.
 /spring/*.pid
 
+# Ignore uploaded image files
+/public/uploads/
+
+
+
 # Created by https://www.gitignore.io/api/emacs
 
 ### Emacs ###
