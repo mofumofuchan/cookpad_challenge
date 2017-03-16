@@ -42,6 +42,9 @@ GEM
     arel (7.1.4)
     bcrypt (3.1.11)
     builder (3.2.3)
+    bullet (5.5.1)
+      activesupport (>= 3.0.0)
+      uniform_notifier (~> 1.10.0)
     byebug (9.0.0)
     carrierwave (1.0.0)
       activemodel (>= 4.0.0)
@@ -192,6 +195,7 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.0.0)
       execjs (>= 0.3.0, < 3)
+    uniform_notifier (1.10.0)
     warden (1.2.7)
       rack (>= 1.0)
     web-console (3.1.1)
@@ -207,6 +211,7 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt (= 3.1.11)
+  bullet (= 5.5.1)
   byebug (= 9.0.0)
   carrierwave (= 1.0.0)
   coffee-rails (= 4.2.1)
