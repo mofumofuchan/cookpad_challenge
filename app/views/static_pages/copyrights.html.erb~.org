@@ -1,0 +1,2 @@
+<h1>StaticPages#copyrights</h1>
+<p>Find me in app/views/static_pages/copyrights.html.erb</p>
