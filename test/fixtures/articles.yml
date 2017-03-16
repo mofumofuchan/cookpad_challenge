@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  content: MyText
-  user: one
+yusuke_1:
+  content: "I love kapipara"
+  user_id: 1
+  drawing: <%= File.join(Rails.root, '/test/fixtures/files/kapibara.jpg') %>
 
-two:
-  content: MyText
-  user: two
+issei_1:
+  content: "I love kapipara, too"
+  user_id: 2
+  drawing: <%= File.join(Rails.root, '/test/fixtures/files/kapibara.jpg') %>
