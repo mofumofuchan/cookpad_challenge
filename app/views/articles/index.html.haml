@@ -1,2 +1,12 @@
 %h1 Articles#index
 %p Find me in app/views/articles/index.html.erb
+%ul
+  - @articles.each do |article|
+    %li
+      = article.user.email
+      | content:
+      \#{article.content}
+      | created_at:
+      \#{article.created_at}
+      | image:
+      \#{image_tag article.drawing.url if article.drawing?}
