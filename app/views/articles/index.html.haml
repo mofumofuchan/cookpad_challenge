@@ -1,13 +1,20 @@
-%div
-  - @articles.each do |article|
-    %div{class:"article"}
-      %div{class:"article-header"}
-        = link_to article.user.email, "/users/"+article.user.id.to_s # FIXME
-      %div{class:"article-drawing"}
-        = image_tag article.drawing.url
-      %div{class:"article-content"}
-        = article.content
-      %div{class:"article-meta"}
-        = article.created_at
-        %div{class:"buttons"}
-          btn
+%div(class="content")
+  %div(class="left_column")
+    - @articles.each do |article|
+      %div{class:"article"}
+        %div{class:"article-header"}
+          = link_to article.user.email, "/users/"+article.user.id.to_s # FIXME
+        %div{class:"article-drawing"}
+          = image_tag article.drawing.url
+        %div{class:"article-content"}
+          = article.content
+        %div{class:"article-meta"}
+          = article.created_at.in_time_zone('Tokyo')
+          %div{class:"buttons"}
+            btn
+  %div(class="right_column")
+    %div(class="user_list")
+      最近登録したユーザー
+      %ul 
+        - @users.each do |user|
+          %li= link_to user.email, "/users/"+user.id.to_s 
