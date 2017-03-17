@@ -14,6 +14,7 @@ gem 'bcrypt',   '3.1.11'
 gem 'devise', '4.2.0'
 gem 'carrierwave', '1.0.0'
 gem "haml-rails", "~> 0.9"
+gem 'bootstrap-sass', '3.3.6'
 
 group :development, :test do
   gem 'sqlite3', '1.3.11'
