@@ -1,12 +1,13 @@
-%h1 Articles#index
-%p Find me in app/views/articles/index.html.erb
-%ul
+%div
   - @articles.each do |article|
-    %li
-      = article.user.email
-      | content:
-      \#{article.content}
-      | created_at:
-      \#{article.created_at}
-      | image:
-      \#{image_tag article.drawing.url if article.drawing?}
+    %div{class:"article"}
+      %div{class:"article-header"}
+        = link_to article.user.email, "/users/"+article.user.id.to_s # FIXME
+      %div{class:"article-drawing"}
+        = image_tag article.drawing.url
+      %div{class:"article-content"}
+        = article.content
+      %div{class:"article-meta"}
+        = article.created_at
+        %div{class:"buttons"}
+          btn

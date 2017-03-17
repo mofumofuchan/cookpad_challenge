@@ -4,6 +4,7 @@
       = image_tag "logo_mini.png", id: "logo_mini_image"
       %ul{:class => "nav navbar-nav navbar-right"}
         - if user_signed_in?
+          %li= link_to "Post", articles_new_path
           %li= link_to "Feed", articles_index_path
           -# TODO My articles,SettingsとLogoutをAccountメニューにまとめる
           %li= link_to "My Articles", "/users/"+current_user.id.to_s
