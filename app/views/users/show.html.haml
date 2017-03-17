@@ -1,9 +1,15 @@
-%h1 Users#show
-your email
-= @user.email
-= link_to "write article", articles_new_path
-%ul
+%div{class:"sidebar"}
+  = @user.email
+  = link_to "write article", articles_new_path
+%div
   - @articles.each do |article|
-    %li
-      = article.content
-      = image_tag article.drawing.url if article.drawing?
+    %div{class:"article"}
+      %div{class:"article-header"}
+      %div{class:"article-drawing"}
+        = image_tag article.drawing.url
+      %div{class:"article-content"}
+        = article.content
+      %div{class:"article-meta"}
+        = article.created_at
+        %div{class:"buttons"}
+          btn

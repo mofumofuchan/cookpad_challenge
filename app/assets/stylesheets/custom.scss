@@ -5,13 +5,20 @@ body {
     width: 100%;
     height: auto;
     padding-top: 20vh;
+    background: #36465d;
 }
+
+header#header-area {
+    background-color: #36465d;
+    border-color: #b92727;
+    border-style: dashed;
+}
+
 #logo {
     float: left;
     margin-right: 10px;
     font-size: 1.7em;
-    color: #fff;
-    text-transform: uppercase;
+    color: #ed4f4f;
     letter-spacing: -1px;
     padding-top: 9px;
     font-weight: bold;
@@ -35,7 +42,10 @@ video#bgvid {
     width: auto; height: auto; z-index: -100;
     background-size: cover;
 }
-.signup-form { 
+
+// サインアップフォーム
+.signup-form {
+    color: black;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -49,6 +59,7 @@ video#bgvid {
     margin-bottom: 40px;
 }
 .signup-form__logo {
+    color: red;
 }
 .signup-form__catchphrase {
     
@@ -76,4 +87,50 @@ video#bgvid {
     color: #FFF;
     font-weight: bold;
     outline: none;
+}
+
+// 投稿記事
+$article-width: 500px;
+.article {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    text-align: left;
+    background-color: white;
+    width: $article-width;
+    padding: 0;
+    border-radius: 4px;
+    font-size: 16px;
+    color: black;
+}
+.article-drawing {
+    & img {
+	max-width: $article-width;
+	height: auto;
+    }
+}
+.article-header {
+    padding: 15px;
+}
+.article-content {
+    padding: 15px;
+}
+.article-meta {
+    padding: 15px;
+    color: #8f8f8f;
+
+    & .buttons {
+	float: right;
+    }
+}
+
+
+// 個人ページ
+.sidebar {
+    width: 138px;
+    padding: 10px;
+    margin-top: 10px;
+    background: transparent;
+    position: fixed;
+    color: white;
 }
