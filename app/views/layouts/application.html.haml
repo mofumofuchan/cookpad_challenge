@@ -1,4 +1,4 @@
-!!!
+!!! 5
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
@@ -6,10 +6,30 @@
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    /[if lt IE 9]
+      %script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"
   %body
-    / ログイン時のflash
-    - if notice
-      %p.alert.alert-success= notice
-    - if alert
-      %p.alert.alert-danger= alert
-    = yield
+    %header{:class => "navbar navbar-fixed-top navbar-inverse"}
+      %div{:class => "container"}
+        = link_to "絵日記ブログ(仮)", '#', id: "logo"
+        %nav
+          %ul{:class => "nav navbar-nav navbar-right"}
+            - if user_signed_in?
+              %li= link_to "My Articles", "/users/"+current_user.id.to_s
+              %li= link_to "Settings", edit_user_registration_path, :class => "navbar-link"
+              %li= link_to "Logout", destroy_user_session_path, method: :delete, class: "navbar-link"
+            - else
+              %li= link_to "Home", static_pages_home_path
+              %li= link_to "Sign up", new_user_registration_path, class: 'navbar-link'
+              %li= link_to "Login", new_user_session_path, class: 'navbar-link'
+            %li= link_to "Help", static_pages_help_path
+            
+    -# / ログイン時のflash
+    -# %div{:id => "flash"}
+    -#   - if notice
+    -#     %p.alert.alert-success= notice
+    -#   - if alert
+    -#     %p.alert.alert-danger= alert
+    %div{:class => "container"}
+      = yield
+ 

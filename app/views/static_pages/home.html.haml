@@ -1,14 +1,12 @@
-%h1 絵日記ブログ
-- if user_signed_in?
-  Logged in as
-  = succeed "." do
-    %strong= current_user.email
-  = link_to "Settings", edit_user_registration_path, :class => "navbar-link"
-  |
-  \#{link_to "Logout", destroy_user_session_path, method: :delete, :class => "navbar-link"}
-  \#{link_to "My Articles", "users/" + current_user.id.to_s}
-- else
-  = link_to "Sign up", new_user_registration_path, :class => 'navbar-link'
-  |
-  \#{link_to "Login", new_user_session_path, :class => 'navbar-link'}
-= link_to "Copyrights", static_pages_copyrights_path
+%video{:autoplay => "", :loop => "", :poster => asset_path("flipbook.jpg"), :id => "bgvid"}
+  %source{:src => asset_path("/videos/flipbook.mp4"), :type => "video/mp4"}
+
+
+%div{class:"signup-form"}
+  %div{class:"signup-form__logo-box"}
+    %div{class:"signup-form__logo"}
+      絵日記ブログ
+    %div{class:"signup-form__catchphrase"}
+      手軽に日記を書こう
+  = link_to "Sign up", new_user_registration_path, :class => 'signup-form__submit'
+  = link_to "Login", new_user_session_path, :class => 'signup-form__submit--login'
