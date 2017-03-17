@@ -17,7 +17,7 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.order("created_at DESC").limit(10).includes(:user) # TODO ページングする
-    # @users = User.order("created_at DESC").limit(4)
+    @users = User.order("created_at DESC").limit(4)
   end
 
   private
