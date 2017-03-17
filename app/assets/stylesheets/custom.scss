@@ -137,7 +137,16 @@ $article-width: 500px;
 	float: right;
     }
 }
-
+.content {
+    margin: auto;
+    width: 700px;
+    .left_column {
+	float: left;
+    }
+    .right_column {
+	float: right;
+    }
+}
 
 // 個人ページ
 .sidebar {
