@@ -1,16 +1,13 @@
-%div{class:"pattern"}
-%video{:autoplay => "", :loop => "", :poster => asset_path("flipbook.jpg"), :id => "bgvid"}
-  %source{:src => asset_path("/videos/flipbook.mp4"), :type => "video/mp4"}
-
-%div{class:"signup-form"}
-  %div{class:"signup-form__logo-box"}
-    %div{class:"signup-form__logo"}
-      = image_tag "logo.png", id: "logo_image"
-    %div{class:"signup-form__catchphrase"}
-      お絵かきは人をつなげる
-  = link_to "新規登録", new_user_registration_path, :class => 'signup-form__submit'
-  = link_to "ログイン", new_user_session_path, :class => 'signup-form__submit--login'
-
-%footer
-  (c)2017
-  %a{href:"http://github.com/mofumofuchan"} mofumofuchan
+%div{:class => "container"}
+  %div{class:"pattern"}
+  %video{:autoplay => "", :loop => "", :poster => asset_path("flipbook.jpg"), :id => "bgvid"}
+    %source{:src => asset_path("/videos/flipbook.mp4"), :type => "video/mp4"}
+  %div{class:"signup-form"}
+    %div{class:"signup-form__logo-box"}
+      %div{class:"signup-form__logo"}
+        = image_tag "logo.png", id: "logo_image"
+      %div{class:"signup-form__catchphrase"}
+        お絵かきは人をつなげる
+      = link_to "新規登録", new_user_registration_path, :class => 'signup-form__submit'
+      = link_to "ログイン", new_user_session_path, :class => 'signup-form__submit--login'
+= render 'layouts/footer'
