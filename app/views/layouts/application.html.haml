@@ -14,22 +14,22 @@
         = link_to "絵日記ブログ(仮)", '#', id: "logo"
         %nav
           %ul{:class => "nav navbar-nav navbar-right"}
-            %li= link_to "Home", static_pages_home_path
-            %li= link_to "Help", static_pages_help_path
             - if user_signed_in?
+              %li= link_to "My Articles", "/users/"+current_user.id.to_s
               %li= link_to "Settings", edit_user_registration_path, :class => "navbar-link"
               %li= link_to "Logout", destroy_user_session_path, method: :delete, class: "navbar-link"
-              %li= link_to "My Articles", "users/" + current_user.id.to_s
             - else
+              %li= link_to "Home", static_pages_home_path
               %li= link_to "Sign up", new_user_registration_path, class: 'navbar-link'
               %li= link_to "Login", new_user_session_path, class: 'navbar-link'
+            %li= link_to "Help", static_pages_help_path
             
-    / ログイン時のflash
-    %div{:id => "flash"}
-      - if notice
-        %p.alert.alert-success= notice
-      - if alert
-        %p.alert.alert-danger= alert
+    -# / ログイン時のflash
+    -# %div{:id => "flash"}
+    -#   - if notice
+    -#     %p.alert.alert-success= notice
+    -#   - if alert
+    -#     %p.alert.alert-danger= alert
     %div{:class => "container"}
       = yield
  
