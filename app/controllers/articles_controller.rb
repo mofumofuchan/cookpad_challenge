@@ -8,11 +8,16 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     @article.user_id = current_user.id
-    @article.save
+    if @article.save
+      redirect_to "/users/" + @article.user_id.to_s
+    else
+      render 'new'
+    end
   end
 
   def index
-    @articles = Article.all.includes(:user) # FIXME
+    @articles = Article.order("created_at DESC").limit(10).includes(:user)
+    # @users = User.order("created_at DESC").limit(4)
   end
 
   private
