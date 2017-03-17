@@ -1,6 +1,5 @@
 %div{class:"sidebar"}
   = @user.email
-  = link_to "write article", articles_new_path
 %div
   - @articles.each do |article|
     %div{class:"article"}
