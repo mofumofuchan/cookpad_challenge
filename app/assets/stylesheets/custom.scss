@@ -24,8 +24,19 @@ header#header-area {
     font-weight: bold;
 }
 #logo:hover {
-    color: #fff;
-    text-decoration: none;
+    //color: #fff;
+    //text-decoration: none;
+}
+#logo_mini_image {
+    margin-left: -40px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: auto;
+    max-height: 50px; 
+}
+#logo_image {
+    max-width: 300px;
+    height: auto;
 }
 .pattern {
     width: 100%;

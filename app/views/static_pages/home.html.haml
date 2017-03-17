@@ -5,7 +5,7 @@
 %div{class:"signup-form"}
   %div{class:"signup-form__logo-box"}
     %div{class:"signup-form__logo"}
-      Sketch it!
+      = image_tag "logo.png", id: "logo_image"
     %div{class:"signup-form__catchphrase"}
       手軽に日記を書こう
   = link_to "新規登録", new_user_registration_path, :class => 'signup-form__submit'
