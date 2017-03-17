@@ -6,6 +6,7 @@ body {
     height: auto;
     padding-top: 20vh;
     background: #36465d;
+    font-family: "Helvetica Neue", "arial", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 
 header#header-area {
@@ -41,11 +42,11 @@ header#header-area {
 .pattern {
     width: 100%;
     height: 100%;
-    background: url(http://www.webcreatorbox.com/sample/images/yokojima.png);
+    background: image-url('yokojima.png');
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: -2;
 }
 video#bgvid {
     position: fixed; right: 0; bottom: 0;
@@ -60,11 +61,12 @@ video#bgvid {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.92);
+    background-color: rgba(54, 70, 95, 1);
     width: 363px;
     padding: 50px 0;
-    border-radius: 4px;
-    font-size: 16px;  
+    border-radius: 10px;
+    font-size: 16px;
+    z-index: 3;
 }
 .signup-form__logo-box {
     margin-bottom: 40px;
@@ -73,12 +75,12 @@ video#bgvid {
     color: red;
 }
 .signup-form__catchphrase {
-    
+    color: white;
 }
 .signup-form__submit {
     display: block;
     margin: 0 auto;
-    margin-bottom: 8px;
+    margin-bottom: 15px;
     width: 300px;
     height: 40px;
     line-height: 40px;
