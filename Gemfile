@@ -16,6 +16,7 @@ gem 'carrierwave', '1.0.0'
 gem "haml-rails", "~> 0.9"
 gem 'bootstrap-sass', '3.3.6'
 gem 'fog', '1.38.0'
+gem 'react-rails', '1.10.0'
 
 group :development, :test do
   gem 'sqlite3', '1.3.11'
