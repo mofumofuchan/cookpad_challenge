@@ -9,6 +9,6 @@ deployment:
     commands:
       - heroku maintenance:on --app s-ketch-it
       - heroku scale worker=0 --app s-ketch-it
-      - git push -f git@heroku.com:enikki-blog.git $CIRCLE_SHA1:refs/heads/master
+      - git push -f git@heroku.com:s-ketch-it.git $CIRCLE_SHA1:refs/heads/master
       - heroku run 'rake db:migrate; rake db:seed' --app s-ketch-it
       - heroku maintenance:off --app s-ketch-it
