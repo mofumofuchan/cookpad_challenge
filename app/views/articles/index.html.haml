@@ -1,17 +1,12 @@
 %div(class="content")
   %div(class="left_column")
     - @articles.each do |article|
-      %div{class:"article"}
-        %div{class:"article-header"}
-          = link_to article.user.email, "/users/"+article.user.id.to_s # FIXME
-        %div{class:"article-drawing"}
-          = image_tag article.drawing.url
-        %div{class:"article-content"}
-          = article.content
-        %div{class:"article-meta"}
-          = article.created_at.in_time_zone('Tokyo')
-          %div{class:"buttons"}
-            btn
+      = react_component('ArticleComponent',
+      {content: article.content,
+      email: article.user.email,
+      user_url: "/users/" + article.user.id.to_s, 
+      drawing_url: article.drawing.url,
+      created_at: article.created_at.in_time_zone('Tokyo').to_s})
   %div(class="right_column")
     %div(class="user_list")
       最近登録したユーザー
