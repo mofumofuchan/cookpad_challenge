@@ -7,8 +7,8 @@ deployment:
   production:
     branch: master
     commands:
-      - heroku maintenance:on --app enikki-blog
-      - heroku scale worker=0 --app enikki-blog
+      - heroku maintenance:on --app s-ketch-it
+      - heroku scale worker=0 --app s-ketch-it
       - git push -f git@heroku.com:enikki-blog.git $CIRCLE_SHA1:refs/heads/master
-      - heroku run 'rake db:migrate; rake db:seed' --app enikki-blog
-      - heroku maintenance:off --app enikki-blog
+      - heroku run 'rake db:migrate; rake db:seed' --app s-ketch-it
+      - heroku maintenance:off --app s-ketch-it
