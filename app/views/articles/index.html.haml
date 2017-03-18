@@ -1,12 +1,13 @@
 %div(class="content")
   %div(class="left_column")
     - @articles.each do |article|
-      = react_component('ArticleComponent',
+      = react_component("ArticleComponent",
       {content: article.content,
       email: article.user.email,
       user_url: "/users/" + article.user.id.to_s, 
       drawing_url: article.drawing.url,
-      created_at: article.created_at.in_time_zone('Tokyo').to_s})
+      created_at: article.created_at.in_time_zone('Tokyo').to_s,
+      heart_image_url: asset_path("heart.png")})
   %div(class="right_column")
     %div(class="user_list")
       最近登録したユーザー

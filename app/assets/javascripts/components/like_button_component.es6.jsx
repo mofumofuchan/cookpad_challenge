@@ -14,73 +14,57 @@ class LikeButtonComponent extends React.Component {
         fontFamily: "helvetica, arial, 'hiragino kaku gothic pro', meiryo, 'ms pgothic', sans-serif",
         fontSize: 11
       },
-      like: {
-        display: "inline-block",
-        background: "#3b5998",
-        padding: "0px 5px",
-        borderRadius: 2,
-        color: "#ffffff",
-        cursor: "pointer",
-        float: "left",
-        height: 20,
-        lineHeight: "20px"
+      heart: {
+	position: 'relative',
+	background: 'url(' + this.props.heart_image_url + ')',
+	backgroundPosition: 'left',
+	repeat: 'noRepeat',
+	backgroundSize: '200%',
+	height: 50,
+	width: 50,
+	marginTop: -10,
+	marginRight: -18
       },
-      likeHover: {
-        background: "#444"
-      },
-      counterBefore: {
-        display: "block",
-        float: "left",
-        width: 6,
-        height: 6,
-        background: "#fafafa",
-        marginLeft: "-12px",
-        borderRight: 10,
-        transform: "rotate(45deg)",
-        WebkitTransform: "rotate(45deg)",
-        marginTop: 6,
-        borderLeft: "1px solid #aaa",
-        borderBottom: "1px solid #aaa"
-      },
-      counter: {
-        display: "block",
-        background: "#fafafa",
-        boxSizing: "border-box",
-        border: "1px solid #aaa",
-        float: "left",
-        padding: "0px 8px",
-        borderRadius: 2,
-        marginLeft: 8,
-        height: 20,
-        lineHeight: "20px"
+      heartLiked: {
+	backgroundPosition: 'right'
       }
     };
   }
 
-  // カーソルが乗った時に状態を変更するイベントハンドラ
   onMouseEnter() {
     this.setState({hovered: true});
   }
 
-  // カーソルが外れた時に状態を変更するイベントハンドラ
   onMouseLeave() {
     this.setState({hovered: false});
   }
 
+  onClick() {
+    this.setState({liked: !this.state.liked});
+  }
+
   render() {
     const styles = this.styles();
-    const likeStyle = this.state.hovered ? Object.assign(styles.like, styles.likeHover) : styles.like;
-    
+
+    // ハートのスタイルを設定
+    let heartStyle;
+    if (!(this.state.liked) && !(this.state.hovered)) {
+      heartStyle = styles.heart;
+    } else {
+      heartStyle = Object.assign(styles.heart, styles.heartLiked);
+    }
+
     return (
-      <span style={styles.container}>
-      <span
-	style={likeStyle}
-	onMouseEnter={this.onMouseEnter.bind(this)}
-	onMouseLeave={this.onMouseLeave.bind(this)}>いいね!</span>
-        <span style={styles.counter}>
-          <span style={styles.counterBefore}>{" "}</span>{this.state.count}
-        </span>
-      </span>
+      <div style={styles.container}>
+	<a href="javascript:void(0);">
+	  <div
+            style={heartStyle}
+            onMouseEnter={this.onMouseEnter.bind(this)}
+	    onMouseLeave={this.onMouseLeave.bind(this)}
+	    onClick={this.onClick.bind(this)}>
+	  </div>
+	</a>
+      </div>
     );
   }
 }

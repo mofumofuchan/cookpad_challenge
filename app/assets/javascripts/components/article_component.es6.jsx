@@ -14,8 +14,7 @@ class ArticleComponent extends React.Component {
 	<div className="article-meta">
 	  {this.props.created_at}
           <div className="buttons">
-	    like-btn
-	    {/* <LikeButtonComponent /> */}
+	    <LikeButtonComponent {...this.props} />
 	  </div>
 	</div>
       </div>
