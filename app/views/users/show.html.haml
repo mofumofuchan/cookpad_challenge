@@ -2,13 +2,10 @@
   = @user.email
 %div
   - @articles.each do |article|
-    %div{class:"article"}
-      %div{class:"article-header"}
-      %div{class:"article-drawing"}
-        = image_tag article.drawing.url
-      %div{class:"article-content"}
-        = article.content
-      %div{class:"article-meta"}
-        = article.created_at.in_time_zone('Tokyo')
-        %div{class:"buttons"}
-          btn
+    = react_component("ArticleComponent",
+    {content: article.content,
+    email: "",
+    user_url: "/users/" + article.user.id.to_s,
+    drawing_url: article.drawing.url,
+    created_at: article.created_at.in_time_zone('Tokyo').to_s,
+    heart_image_url: asset_path("heart.png")})
