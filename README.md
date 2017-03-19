@@ -6,7 +6,7 @@ Sketch it!
 
 ![Sketch it!](https://raw.githubusercontent.com/mofumofuchan/cookpad_challenge/master/app/assets/images/logo.png)
 
-## 概要
+## Description
 Sketch it! は、気軽なお絵かきを通じて、人々の繋がりを生み出す「イラストコミュニケーションサイト」です。
 
 ## Requirement
@@ -30,8 +30,8 @@ bundle exec rails s
 masterブランチが更新されると、Circle CIによって自動的に本番環境(heroku)にデプロイされます。
 
 ## Test
-このリポジトリは[Circle CI](https://circleci.com/gh/mofumofuchan/cookpad_challenge)によって自動テストされています。
-- 
+このリポジトリは[CircleCI](https://circleci.com/gh/mofumofuchan/cookpad_challenge)によって自動テストされています。
+
 
 ## License
 MIT License
