@@ -9,7 +9,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
     @article.user_id = current_user.id
     if @article.save
-      redirect_to "/users/" + @article.user_id.to_s
+      redirect_to articles_index_path
     else
       render 'new'
     end
