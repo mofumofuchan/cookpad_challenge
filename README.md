@@ -2,11 +2,10 @@ Sketch it!
 ===
 
 [![CircleCI](https://circleci.com/gh/mofumofuchan/cookpad_challenge/tree/master.svg?style=svg)](https://circleci.com/gh/mofumofuchan/cookpad_challenge/tree/master)
-
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 
 イラストコミュニケーションサイト
-[Sketch it!](https://raw.githubusercontent.com/mofumofuchan/cookpad_challenge/master/app/assets/images/logo.png)
+![Sketch it!](https://raw.githubusercontent.com/mofumofuchan/cookpad_challenge/master/app/assets/images/logo.png)
 ## 概要
 Sketch it! は、気軽なお絵かきを通じて、人々の繋がりを生み出す「イラストコミュニケーションサイト」です。
 
@@ -18,20 +17,21 @@ Sketch it! は、気軽なお絵かきを通じて、人々の繋がりを生み
 
 ## Quick Start
 
-### サーバーの起動
+### Install and launch server locally
 ```sh
 git clone git@github.com:mofumofuchan/cookpad_challenge.git
 bundle install --path vender/bundle
 bundle exec rails s
 ```
-### アクセス
+### Access local Sketch it!
 ``http://localhost:3000/``
 
-## デプロイ
-masterにPRがマージされればCircle CIによって自動的に本番環境(heroku)にデプロイされます。
+## Deployment
+masterブランチが更新されると、Circle CIによって自動的に本番環境(heroku)にデプロイされます。
 
-## テスト
-Circle CIによる自動テストが走っています。
+## Test
+このリポジトリは[Circle CI](https://circleci.com/gh/mofumofuchan/cookpad_challenge)によって自動テストされています。
+- 
 
-## ライセンス
+## License
 - MIT License
