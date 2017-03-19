@@ -32,6 +32,5 @@ masterブランチが更新されると、CircleCIによって自動的に本番
 ## Test
 このリポジトリは[CircleCI](https://circleci.com/gh/mofumofuchan/cookpad_challenge)によって自動テストされています。
 
-
 ## License
 MIT License
