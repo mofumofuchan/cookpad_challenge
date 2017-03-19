@@ -27,7 +27,7 @@ bundle exec rails s
 ``http://localhost:3000/``
 
 ## Deployment
-masterブランチが更新されると、Circle CIによって自動的に本番環境(heroku)にデプロイされます。
+masterブランチが更新されると、CircleCIによって自動的に本番環境(heroku)にデプロイされます。
 
 ## Test
 このリポジトリは[CircleCI](https://circleci.com/gh/mofumofuchan/cookpad_challenge)によって自動テストされています。
