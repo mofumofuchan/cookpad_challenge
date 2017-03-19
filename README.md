@@ -30,8 +30,7 @@ bundle exec rails s
 masterブランチが更新されると、Circle CIによって自動的に本番環境(heroku)にデプロイされます。
 
 ## Test
-このリポジトリは[Circle CI](https://circleci.com/gh/mofumofuchan/cookpad_challenge)によって自動テストされています。
-- 
+このリポジトリは[Circle CI](https://circleci.com/gh/mofumofuchan/cookpad_challenge)によって自動テストされています。 
 
 ## License
 MIT License
