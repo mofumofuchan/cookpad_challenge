@@ -16,8 +16,10 @@
       .post-form__body-preview-title
         %a ブラウザ上で書く
         | アップロード
+
       -if false
         -# プレビューを表示させたい
+      jpg, png, gifをアップロードできます．
       = f.file_field :drawing
       = f.hidden_field :drawing_cache
   .post-from__body-content
