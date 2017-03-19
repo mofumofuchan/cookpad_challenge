@@ -10,7 +10,6 @@
       heart_image_url: asset_path("heart.png")})
   %div(class="right_column")
     %div(class="user_list")
-      最近登録したユーザー
-      %ul 
-        - @users.each do |user|
-          %li= link_to user.email, "/users/"+user.id.to_s 
+      %div(class="user_list-title") 最近登録したユーザー
+      - @users.each do |user|
+        %div(class="user_list-item")= link_to user.email, "/users/"+user.id.to_s 
