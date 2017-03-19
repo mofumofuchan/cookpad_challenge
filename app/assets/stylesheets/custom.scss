@@ -325,3 +325,23 @@ $article-width: 500px;
 	float: right;
     }
 }
+
+/*
+ * Aboutページ
+ */
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+.about-page {
+    color: white;
+    text-align: center;
+    .special-thanks {
+	font-family: 'Indie Flower', cursive;
+	margin: 25px auto 0 auto;
+	text-align: left;
+	float: center;
+	width: 300px;
+	font-size: 20px;
+	ul {
+	    list-style: none;
+	}
+    }
+}
