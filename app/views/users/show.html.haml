@@ -1,11 +1,12 @@
-%div{class:"sidebar"}
-  = @user.email
-%div
-  - @articles.each do |article|
-    = react_component("ArticleComponent",
-    {content: article.content,
-    email: "",
-    user_url: "/users/" + article.user.id.to_s,
-    drawing_url: article.drawing.url,
-    created_at: article.created_at.in_time_zone('Tokyo').to_s,
-    heart_image_url: asset_path("heart.png")})
+%div(class="user_articles")
+  %aside(class="user_info")
+    = @user.email
+  %div(class="articles")
+    - @articles.each do |article|
+      = react_component("ArticleComponent",
+      {content: article.content,
+      email: "",
+      user_url: "/users/" + article.user.id.to_s,
+      drawing_url: article.drawing.url,
+      created_at: article.created_at.in_time_zone('Tokyo').to_s,
+      heart_image_url: asset_path("heart.png")})
