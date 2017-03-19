@@ -2,11 +2,10 @@ Sketch it!
 ===
 
 [![CircleCI](https://circleci.com/gh/mofumofuchan/cookpad_challenge/tree/master.svg?style=svg)](https://circleci.com/gh/mofumofuchan/cookpad_challenge/tree/master)
-
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 
-イラストコミュニケーションサイト
-[Sketch it!](https://raw.githubusercontent.com/mofumofuchan/cookpad_challenge/master/app/assets/images/logo.png)
+![Sketch it!](https://raw.githubusercontent.com/mofumofuchan/cookpad_challenge/master/app/assets/images/logo.png)
+
 ## 概要
 Sketch it! は、気軽なお絵かきを通じて、人々の繋がりを生み出す「イラストコミュニケーションサイト」です。
 
@@ -34,4 +33,4 @@ masterにPRがマージされればCircle CIによって自動的に本番環境
 Circle CIによる自動テストが走っています。
 
 ## ライセンス
-- MIT License
+MIT License
