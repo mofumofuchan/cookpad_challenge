@@ -144,6 +144,29 @@ footer ul li {
 }
 
 /*
+ * ログイン画面
+ */
+.login-form {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: rgba(54, 70, 95, 1);
+    width: 363px;
+    // padding: 50px 0;
+    border-radius: 10px;
+    font-size: 16px;
+    z-index: 3;
+    .login-form__title {
+	color: white;
+	margin-top: 10px;
+	margin-bottom: 10px;
+    }
+    .login-form__body-label {
+	color: white;
+    }
+}
+
+/*
  * フィードページ
  */
 // 2カラム
