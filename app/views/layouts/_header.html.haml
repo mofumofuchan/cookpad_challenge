@@ -4,13 +4,13 @@
       = image_tag "logo_mini.png", id: "logo_mini_image"
       %ul{:class => "nav navbar-nav navbar-right"}
         - if user_signed_in?
-          %li= link_to "Post", articles_new_path
-          %li= link_to "Feed", articles_index_path
+          %li= link_to "投稿する", articles_new_path
+          %li= link_to "フィード", articles_index_path
           -# TODO My articles,SettingsとLogoutをAccountメニューにまとめる
-          %li= link_to "My Posts", "/users/"+current_user.id.to_s
-          %li= link_to "Logout", destroy_user_session_path, method: :delete, class: "navbar-link"
+          %li= link_to "マイページ", "/users/"+current_user.id.to_s
+          %li= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "navbar-link"
         - else
-          %li= link_to "Home", root_path
-          %li= link_to "Feed", articles_index_path
-          %li= link_to "Sign up", new_user_registration_path, class: 'navbar-link'
-          %li= link_to "Login", new_user_session_path, class: 'navbar-link'
+          %li= link_to "トップページ", root_path
+          %li= link_to "フィード", articles_index_path
+          %li= link_to "新規登録", new_user_registration_path, class: 'navbar-link'
+          %li= link_to "ログイン", new_user_session_path, class: 'navbar-link'
