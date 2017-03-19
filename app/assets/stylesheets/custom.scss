@@ -237,6 +237,7 @@ $article-width: 500px;
 // 最近登録したユーザ
 .user_list {
     width: 250px;
+    position: fixed;
     .user_list-title {
 	height: 25px;
 	border-bottom: 2px solid hsla(0,0%,100%,.13);
