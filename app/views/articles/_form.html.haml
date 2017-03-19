@@ -1,5 +1,5 @@
-= current_user.email
 = form_for(article, url: articles_create_path, html: { multipart: true }) do |f|
+  -# TODO エラーは上部出したほうがいい気がする
   - if article.errors.any?
     #error_explanation
       %h2
@@ -8,16 +8,19 @@
       %ul
         - article.errors.full_messages.each do |message|
           %li= message
-  .field
-    = f.label :content
-    = f.text_field :content
-  .field
-    - if article.drawing?
-      .thumbnail
-        = image_tag article.drawing.url
-    %br/
-    = f.label :drawing
-    %br/
-    = f.file_field :drawing
-  .actions
-    = f.submit
+  .post-form__body-preview
+    -if false
+      -# 本当はここにブラウザ上で書くペインタを作りたい！！！
+
+    -else
+      .post-form__body-preview-title
+        %a ブラウザ上で書く
+        | アップロード
+      -if false
+        -# プレビューを表示させたい
+      = f.file_field :drawing
+      = f.hidden_field :drawing_cache
+  .post-from__body-content
+    = f.text_area :content, placeholder: "キャプションを入力できます"
+  .post-form__body-action
+    = f.submit "投稿", class: "btn btn-primary", id: "submit_button"
