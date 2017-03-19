@@ -4,7 +4,7 @@
 body {
     width: 100%;
     height: auto;
-    padding-top: 20vh;
+    padding-top: 80px;
     background: #36465d;
     font-family: "Helvetica Neue", "arial", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
@@ -147,6 +147,55 @@ $article-width: 500px;
 	float: right;
     }
 }
+
+// 投稿画面
+.post-form {
+    margin: 0 auto;
+    width: $article-width;
+}
+.post-form__title {
+    margin-bottom: 20px;
+    padding: 5px;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+.post-form__body {
+    margin-bottom: 20px;
+    border-radius: 4px;
+    background-color: white;
+}	
+.post-form__body-header {
+    padding: 15px;
+}
+.post-form__body-preview {
+    padding: 15px;
+    background-color: #8091aa;
+}
+.post-form__body-preview-title {
+    margin-bottom: 30px;
+    text-align: center;
+    color: white;
+    a {
+	text-decolation: underline;
+    }
+    a:hover {
+	text-decolation: none;
+    }
+}
+.post-form__body-content {
+    padding: 15px;
+}
+#article_content {
+    width: 100%;
+}
+.post-form__body-action {
+    text-align: center;
+    #submit_button {
+	margin: 5px;
+    }
+}
+
 
 // 個人ページ
 .sidebar {

@@ -1,2 +1,6 @@
-%h1 New Article
-= render 'form', article: @article
+.post-form
+  .post-form__title お絵かきを投稿
+  .post-form__body
+    .post-form__body-header
+      = current_user.email
+    = render 'form', article: @article
